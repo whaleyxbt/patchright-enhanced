@@ -1,6 +1,6 @@
 # GhostProbe
 
-Stealth browser automation framework for penetration testing, scraping, and WAF bypass. Built on [Patchright](https://github.com/AmineDiro/patchright) - a patched fork of Playwright that avoids common automation detection vectors.
+Stealth browser automation framework for penetration testing, scraping, and WAF bypass. Built on [Patchright](https://github.com/Kaliiiiiiiiii-Vinyzu/patchright-nodejs) — a patched fork of Playwright that avoids common automation detection vectors.
 
 Zero fingerprint injection. Clean Chrome sessions that pass Cloudflare, Kasada, DataDome, and other WAFs out of the box.
 
@@ -110,6 +110,24 @@ export async function myScenario(page: Page): Promise<void> {
 ```
 
 See `src/start/leadFormPentest.ts` for a full example.
+
+## Use with AI Agents
+
+GhostProbe works as a stealth browser backend for AI agents like [OpenClaw](https://github.com/openclaw/openclaw). Most agents use standard Playwright/Puppeteer under the hood, which gets instantly blocked by WAFs due to `Runtime.enable` leaks and automation flags.
+
+GhostProbe solves this by providing a clean Patchright-powered `page` object that the agent can control without triggering any detection:
+
+```typescript
+import { createBrowserContext } from './src/browser/context-factory';
+
+const { context, page } = await createBrowserContext(browserConfig, proxyConfig);
+
+// Pass `page` to your AI agent — it works through a real Chrome session
+// with proxy rotation and zero automation markers
+await yourAgent.run(page);
+```
+
+The agent handles the logic, GhostProbe handles the stealth. I hope your openclaw gonna like it :)
 
 ## Anti-Detection
 
