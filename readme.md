@@ -1,23 +1,23 @@
 # GhostProbe
 
-Stealth browser automation framework for penetration testing, scraping, and WAF bypass. Built on [Patchright](https://github.com/AmineDiro/patchright) — a patched fork of Playwright that avoids common automation detection vectors.
+Stealth browser automation framework for penetration testing, scraping, and WAF bypass. Built on [Patchright](https://github.com/AmineDiro/patchright) - a patched fork of Playwright that avoids common automation detection vectors.
 
-Zero fingerprint injection. Zero spoofing scripts. Clean Chrome sessions that pass Cloudflare, Kasada, DataDome, and other WAFs out of the box.
+Zero fingerprint injection. Clean Chrome sessions that pass Cloudflare, Kasada, DataDome, and other WAFs out of the box.
 
 ## Features
 
-- **Undetectable by design** — uses Patchright with `channel: "chrome"` and `viewport: null`, no custom User-Agent or fingerprint injection
-- **Proxy rotation** — round-robin proxy support from `proxies.txt` (format: `host:port:user:pass`)
-- **Parallel sessions** — configurable concurrent browser instances with isolated temp profiles
-- **Human-like interaction utils** — mouse wiggle, smooth scroll, sequential typing, bulletproof click
-- **Traffic blocker** — blocks heavy media, fonts, and ad network domains to save bandwidth
-- **Clean session lifecycle** — temp profile per session, auto-cleanup on close
+- **Undetectable by design** - uses Patchright with `channel: "chrome"` and `viewport: null`, no custom User-Agent or fingerprint injection
+- **Proxy rotation** - round-robin proxy support from `proxies.txt` (format: `host:port:user:pass`)
+- **Parallel sessions** - configurable concurrent browser instances with isolated temp profiles
+- **Human-like interaction utils** - mouse wiggle, smooth scroll, sequential typing, bulletproof click
+- **Traffic blocker** - blocks heavy media, fonts, and ad network domains to save bandwidth
+- **Clean session lifecycle** - temp profile per session, auto-cleanup on close
 
 ## Project Structure
 
 ```
 ghostprobe/
-├── main.ts                          # Entry point — session loop
+├── main.ts                          # Entry point - session loop
 ├── src/
 │   ├── browser/
 │   │   ├── context-factory.ts       # Patchright context creation
@@ -49,7 +49,7 @@ ghostprobe/
 └── .env.example                     # Env template
 ```
 
-## Setup
+## Setup for Linux
 
 ```bash
 # Install dependencies
