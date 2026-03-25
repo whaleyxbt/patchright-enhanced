@@ -1,0 +1,20 @@
+{
+  "name": "ghostprobe",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "ts-node main.ts",
+    "start": "node dist/main.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "patchright": "^1.57.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
