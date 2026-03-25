@@ -1,12 +1,16 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import { getAppConfig } from './src/config/index';
 import { SessionManager } from './src/session/session-manager';
-import { startPageUrl } from './src/start/default';
+import { getStartPageUrl } from './src/start/default';
 
 async function main() {
   const config = getAppConfig();
   console.log('--- Starting session loop ---');
 
-  const sessionManager = new SessionManager(config, startPageUrl!);
+  const startPageUrl = getStartPageUrl();
+  const sessionManager = new SessionManager(config, startPageUrl);
   const PARALLEL_COUNT = config.maxParallel;
 
   while (true) {

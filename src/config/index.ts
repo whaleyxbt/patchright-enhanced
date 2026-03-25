@@ -1,11 +1,8 @@
 import * as path from 'path';
 import * as fs from 'fs';
-import dotenv from 'dotenv';
 import type { AppConfig } from '../types/config.types';
 import { getBrowserConfig } from './browser.config';
 import { getProxyConfig } from './proxy.config';
-
-dotenv.config();
 
 export function getAppConfig(): AppConfig {
   const sessionsDir = process.env.SESSIONS_DIR 
