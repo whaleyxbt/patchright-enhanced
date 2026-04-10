@@ -20,7 +20,7 @@ export async function createBrowserContext(
     channel: 'chrome',
     headless: browserConfig.headless,
     executablePath: browserConfig.executablePath,
-    locale: browserConfig.locale,
+    // locale: browserConfig.locale, // nah, cloudlfare detects it
     timezoneId: browserConfig.timezoneId,
     viewport: null,
 
