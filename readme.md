@@ -1,12 +1,12 @@
 # GhostProbe
 
-Stealth browser automation framework for penetration testing, scraping, and WAF bypass. Built on [Patchright](https://github.com/Kaliiiiiiiiii-Vinyzu/patchright-nodejs) — a patched fork of Playwright that avoids common automation detection vectors.
+Stealth browser automation framework for penetration testing, scraping, and WAF bypass. Built on [Patchright](https://github.com/Kaliiiiiiiiii-Vinyzu/patchright-nodejs).
 
-Zero fingerprint injection. Clean Chrome sessions that pass Cloudflare, Kasada, DataDome, and other WAFs out of the box.
+Clean Chrome sessions that pass Cloudflare, Kasada, DataDome, and other WAFs out of the box.
 
 ## Features
 
-- **Undetectable by design** - uses Patchright with `channel: "chrome"` and `viewport: null`, no custom User-Agent or fingerprint injection
+- **Undetectable** - uses Patchright with `channel: "chrome"`
 - **Proxy rotation** - round-robin proxy support from `proxies.txt` (format: `host:port:user:pass`)
 - **Parallel sessions** - configurable concurrent browser instances with isolated temp profiles
 - **Human-like interaction utils** - mouse wiggle, smooth scroll, sequential typing, bulletproof click
