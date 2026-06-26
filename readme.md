@@ -28,7 +28,6 @@ All settings are in `.env`:
 | Variable | Default | Description |
 |---|---|---|
 | `BROWSER_EXECUTABLE_PATH` | `/usr/bin/google-chrome-stable` | Path to Chrome binary |
-| `BROWSER_LOCALE` | `de-DE` | Browser locale |
 | `BROWSER_TIMEZONE` | `Europe/Berlin` | Browser timezone |
 | `MAX_PARALLEL` | `1` | Number of parallel sessions |
 | `START_PAGE_URL` | `https://google.com/` | Initial page to open |
