@@ -4,6 +4,8 @@ stealth browser automation framework for penetration testing, scraping, and WAF 
 
 clean chrome sessions that pass Cloudflare, Kasada, DataDome, and other WAFs out of the box.
 
+that's basically just a wrapper around OG patchright, so it's easier to get started.
+
 ## Setup for Linux
 
 ```bash
